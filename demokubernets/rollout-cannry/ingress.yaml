@@ -2,10 +2,9 @@ apiVersion: extensions/v1beta1
 kind: Ingress
 metadata:
   name: myingress
-  namespace:  ngroshan
 spec:
   rules:
-  - host: roshan.nginx.com
+  - host: sample.web.lk
     http:
       paths:
       - backend:
