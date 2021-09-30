@@ -4,7 +4,7 @@ metadata:
   name: myingress
 spec:
   rules:
-  - host: roshan.nginx.com
+  - host: demo.nginx.com
     http:
       paths:
       - backend:
