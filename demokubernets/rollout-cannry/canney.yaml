@@ -26,6 +26,6 @@ spec:
     spec:
       containers:
       - name: mynginx
-        image: redis
+        image: wordpress
         ports:
           - containerPort: 80
