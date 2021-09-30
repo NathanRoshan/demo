@@ -71,9 +71,7 @@ spec:
                 name: service-configs-adt
             - secretRef:
                 name: service-adt-secret
-          image: >-
-            harbor.cs.local/vidaplus/csi-rms-morgue-java-service:${
-            parameters.Tag }
+          image: harbor.cs.local/vidaplus/csi-rms-morgue-java-service:4.1.1.0-a26
           imagePullPolicy: Always
           livenessProbe:
             httpGet:
