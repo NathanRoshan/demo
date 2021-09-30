@@ -26,6 +26,6 @@ spec:
     spec:
       containers:
       - name: mynginx
-        image: http
+        image: httpd
         ports:
           - containerPort: 80
