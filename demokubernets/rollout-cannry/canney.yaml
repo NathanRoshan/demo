@@ -26,6 +26,6 @@ spec:
     spec:
       containers:
       - name: mynginx
-        image: nginx:1.16
+        image: http
         ports:
           - containerPort: 80
