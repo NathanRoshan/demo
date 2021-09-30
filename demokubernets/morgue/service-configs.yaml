@@ -26,6 +26,7 @@ data:
   KAFKA_BOOTSTRAP_SERVERS: 172.15.100.210:9092,172.15.100.210:9093,172.15.100.210:9094,172.15.100.211:9092,172.15.100.211:9093,172.15.100.211:9094
   KAFKA_BOOTSTRAPADDRESS: 172.15.100.210:9092,172.15.100.210:9093,172.15.100.210:9094,172.15.100.211:9092,172.15.100.211:9093,172.15.100.211:9094
   KAFKA_CONSUMER_BOOTSTRAP_SERVERS: 172.15.100.210:9092,172.15.100.210:9093,172.15.100.210:9094,172.15.100.211:9092,172.15.100.211:9093,172.15.100.211:9094
+  KAFKA_ELK_TOPIC: log-sinks-kafka-local-dev
   ORM_CONFIGURATION: spring
   ORM_HTTP_MULTIPART_MAX-FILE-SIZE: 100MB
   ORM_HTTP_MULTIPART_MAX-REQUEST-SIZE: 100MB
@@ -42,6 +43,7 @@ data:
   SPRING_RABBITMQ_HOST: rabbitmq
   SPRING_RABBITMQ_PORT: "5672"
   activeProfile: java-dev
+  apm_server: http://172.100.10.57:8200
   cache_type: redis
   config_server: http://config-server
   db-dialect: org.hibernate.dialect.PostgreSQLDialect
@@ -53,6 +55,7 @@ data:
   eureka_ip: eureka
   eureka_port: "8888"
   eureka_server: http://eureka:8761/eureka/
+  management_health_refresh_enabled: "false"
   mongo_port: "27017"
   mongo_server: mongo
   net_environment: DEV
@@ -61,7 +64,6 @@ data:
   rootDomainName: moh-test.vida.local
   svc_reg_addr: eureka
   ui_hostname: http://webserver-service
-  management_health_refresh_enabled: "false"
 kind: ConfigMap
 metadata:
   name: service-configs
