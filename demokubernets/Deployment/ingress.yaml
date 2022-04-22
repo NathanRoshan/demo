@@ -9,10 +9,10 @@ metadata:
     nginx.ingress.kubernetes.io/affinity-mode: persistent
 spec:
   rules:
-  - host: sample.web.lk
+  - host: www.health.tsolution.lk
     http:
       paths:
       - path: /
         backend:
-          serviceName: nginxapp
+          serviceName: 
           servicePort: 80
