@@ -1,18 +1,19 @@
----
-apiVersion: extensions/v1beta1
+apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: realtimeapp-ingress
   annotations:
     kubernetes.io/ingress.class: nginx
-    nginx.ingress.kubernetes.io/affinity: cookie
-    nginx.ingress.kubernetes.io/affinity-mode: persistent
+  name: Healthcare-app-ingress
+  namespace: prod
 spec:
   rules:
-  - host: www.health.tsolution.lk
+  - host: health.tsolution.lk
     http:
       paths:
-      - path: /
-        backend:
-          serviceName: Healthcare-app
-          servicePort: 80
+      - backend:
+          service:
+            name: Healthcare-app
+            port:
+              number: 80
+        path: /
+        pathType: ImplementationSpecific
